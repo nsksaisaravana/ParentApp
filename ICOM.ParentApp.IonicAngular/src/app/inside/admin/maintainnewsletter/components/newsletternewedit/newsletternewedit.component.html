@@ -1,0 +1,64 @@
+<form #newsLetterEdit="ngForm">
+  <div>
+  <!-- <ion-row>
+      <p-fileUpload mode="basic" name="demo[]" accept="image/*" chooseLabel="Upload Newsletter Image" maxFileSize="1000000" (onSelect)="onUpload($event)"></p-fileUpload>
+      <img  [src]="uploadedImage" *ngIf="uploadedImage"/>
+  </ion-row> -->
+  <div class="form-group" [class.has-error]="titleControl.invalid && titleControl.touched">
+    <ion-row>
+      Title
+    </ion-row>
+    <ion-row>
+      <ion-item>
+        <ion-input #titleControl required type="text" placeholder="Title" [(ngModel)]="newsletter.Title"  name="Title" #titleControl="ngModel"></ion-input>
+      </ion-item>
+    </ion-row>
+  </div>
+  <div class="form-group" [class.has-error]="shortDescControl.invalid && shortDescControl.touched">
+    <ion-row>
+      Short Desc
+    </ion-row>
+    <ion-row>
+      <ion-item>
+        <!-- <ion-input #shortDescControl required type="text" placeholder="Short Desc" [(ngModel)]="newsletter.ShortDesc"  name="ShortDesc" #shortDescControl="ngModel"></ion-input> -->
+        <ion-textarea rows="5" cols="20" maxlength="240" #shortDescControl required type="text" placeholder="Short Desc" [(ngModel)]="newsletter.ShortDesc"  name="ShortDesc" #shortDescControl="ngModel"></ion-textarea>
+      </ion-item>
+    </ion-row>
+  </div>
+ 
+  <div class="form-group" [class.has-error]="publishedControl.invalid && publishedControl.touched">
+      <ion-row>
+        Published
+      </ion-row>
+      <ion-row>
+        <ion-item>
+          <ion-checkbox #publishedControl required type="text" placeholder="Short Desc" [(ngModel)]="newsletter.IsPublished" [checked]="newsletter.IsPublished"   name="IsPublished" #publishedControl="ngModel"></ion-checkbox>
+        </ion-item>
+      </ion-row>
+    </div>
+    <ion-item>
+      <ion-label>Type</ion-label>
+      <ion-select placeholder="Bookmark/Newsletter" [(ngModel)]="newsletter.Type"  name="bookOrNewsletter" #bookOrNewsletterControl required>
+        <ion-select-option value="Newsletters">Newsletter</ion-select-option>
+        <ion-select-option value="Booklists">Booklists</ion-select-option>
+        <ion-select-option value="Forms">Forms</ion-select-option>
+        <ion-select-option value="Others">Others</ion-select-option>
+      </ion-select>
+    </ion-item>
+    <ion-row>
+      <p-fileUpload mode="basic" name="demo[]" accept="pdf/*" chooseLabel="Upload Newsletter PDF" maxFileSize="1000000" (onSelect)="onUploadPdfFile($event)"></p-fileUpload>
+      <!-- <img  [src]="uploadedImage" *ngIf="uploadedImage"/> -->
+    </ion-row>
+    <ion-row>
+      <span (click)="showPdf()" *ngIf="uploadedPdfBlob">Show Pdf</span>
+    </ion-row>
+  <!-- <p-editor #publishingContentControl required [(ngModel)]="newsletter.PublishingPageContent" [style]="{'height':'320px'}" name="PublishingPageContent"></p-editor> -->
+  <!-- <div innerHTML={{richText}} ></div> -->
+  <!-- <quill-editor [(ngModel)]="richText"></quill-editor> -->
+  <ion-row>
+    <ion-button  type="button" (click)="saveNewsLetterEdit()" [disabled]="newsLetterEdit.invalid" *ngIf="uploadedPdfBlob">Save</ion-button>
+    <ion-button  type="button" (click)="clearNewsLetter()">Clear</ion-button>
+    <ion-button  type="button" (click)="GotoList()">Exit</ion-button>
+  </ion-row>
+</div>
+</form>

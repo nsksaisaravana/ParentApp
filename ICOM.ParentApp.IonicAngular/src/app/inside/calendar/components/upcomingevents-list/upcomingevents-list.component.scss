@@ -1,0 +1,105 @@
+.eventNo {
+    position: absolute;
+    right: 50px;
+    background: #96000C;
+    padding: 4px 8px 4px 8px;
+    border-radius: 16px;
+    color: white;
+}
+
+.calendarMonth {
+    font-size: 20px; 
+}
+
+
+
+div.mat-expansion-panel-body {
+    padding-right: 0px !important;
+    padding-left: 0px !important;
+    background-image: url(/assets/images/menuBackground.png);
+    background-size: 100% 100%;
+    background-position: center center;
+    padding-bottom: 0px !important;
+}
+
+ion-list ion-item {
+    --inner-padding-end: 0px !important;
+}
+
+ion-card {
+    box-shadow: none !important;
+    margin: 0 !important;
+}
+
+ion-card-header {
+    padding: 20px 0px 0px 0px !important;
+}
+
+// .login__overlay {
+//     position: absolute;
+//     top: 0;
+//     left: 0;
+//     width: 100%;
+//     height: 100%;
+//     background-size: 100% 100%;
+//     background-position: center center;
+// }
+
+.calendarDate {
+    position: relative;
+    bottom: 60px;
+    left: 44px;
+    font-size: 15px;
+    text-transform: uppercase;
+}
+
+.list-ios {
+    margin-bottom: 1px !important;
+}
+
+.mat-expansion-panel-header {
+    background: rgba(150, 0, 12, 0.04);
+}
+
+.mat-expansion-panel-header.mat-expanded:focus, .mat-expansion-panel-header.mat-expanded:hover {
+    background: rgba(150, 0, 12, 0.04) !important;
+}
+
+.mat-expansion-panel:not(.mat-expanded):not([aria-disabled=true]) .mat-expansion-panel-header:hover {
+    background: rgba(150, 0, 12, 0.04) !important;
+}
+/*Pixel 2 */
+@media only screen 
+and (min-width: 411px)
+and (max-width: 767px)
+and (orientation: portrait) {
+   .calendarDate    {left:38px !important}
+}
+/*iPhone 6, 7, & 8 Plus in portrait*/
+@media only screen 
+and (min-device-width : 414px) 
+and (max-device-width : 736px) 
+and (orientation : portrait) {
+    /*.calendarDate{left:32px !important}*/
+    .calendarDate{left:45px !important}
+}
+
+/*iPhone 6, 7, & 8 in portrait*/
+@media only screen 
+and (min-device-width : 375px) 
+and (max-device-width : 667px) 
+and (orientation : portrait) {
+    .calendarDate {
+        left:45px !important;
+    }
+}
+/*Iphone 5/SE landscape*/
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 568px)
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: portrait) {
+    .calendarDate {
+        left:45px;
+    }
+}

@@ -1,0 +1,13 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+        <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>maintain-notifications</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <app-notification-list (clickMaintainNotificationListChild)="clickMaintainNotificationListParent($event)" [hidden]="!showNotificationList"></app-notification-list>
+  <app-notification-newedit (clickMaintainNotificationDetailChild)="clickMaintainNotificationDetailParent($event)" [hidden]="showNotificationList"></app-notification-newedit>
+</ion-content>

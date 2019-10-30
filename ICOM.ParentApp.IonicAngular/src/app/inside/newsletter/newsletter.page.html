@@ -1,0 +1,18 @@
+<ion-header>
+  <ion-toolbar color="tertiary">
+    <ion-buttons slot="start" *ngIf="isNewsLetterList">
+        <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-row>
+      <ion-icon name="arrow-back" (click)="isNewsLetterList=true;newsletterTitle='News'"  *ngIf="!isNewsLetterList"></ion-icon>
+      <ion-title>
+          {{newsletterTitle}}
+      </ion-title>
+    </ion-row>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <app-newsletter-list (clickNewsLetterChild)="clickNewsLetterParent($event)" [hidden]="!isNewsLetterList"></app-newsletter-list>
+  <app-newsletter-detail (clickNewsLetterDetailChild)="clickNewsLetterDetailParent($event)" (clickDownloadFileChild)="clickDownloadFileParent($event)" [hidden]="isNewsLetterList" ></app-newsletter-detail>
+</ion-content>

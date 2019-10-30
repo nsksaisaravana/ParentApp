@@ -1,0 +1,28 @@
+.customButton{
+    --border-radius:5px !important;
+    height:36px;
+    width:90px;
+    margin-right:3px;
+}
+.customInput{
+    --inner-border-width: 0px 0px 0px 0px !important;
+    --highlight-height: 0px !important;
+    --border-style: none !important;
+}
+.datestyle{border: 1px solid #dedede;min-width:300px}
+
+.m-signature-pad{
+    position: relative;
+    font-size: 10px;
+    width:300px;
+    border:1px solid #e8e8ee;
+    background-color: #fff;
+    margin-top: 5px;
+}
+.m-signature-pad-body{
+    height: 150px;
+}
+
+canvas {
+   width:290px !important;
+}

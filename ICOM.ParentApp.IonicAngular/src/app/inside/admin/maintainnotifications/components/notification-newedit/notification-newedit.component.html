@@ -1,0 +1,71 @@
+<form #maintainNotification="ngForm">
+  <div class="form-group" [class.has-error]="notificationTitleControl.invalid && notificationTitleControl.touched">
+    <ion-row>
+      Notification Title
+    </ion-row>
+    <ion-row>
+      <ion-item>
+        <ion-input #notificationTitleControl required type="text" placeholder="Notification Title" [(ngModel)]="notification.Title"  name="notificationTitle" #notificationTitleControl="ngModel"></ion-input>
+      </ion-item>
+    </ion-row>
+  </div>
+  <div class="form-group" [class.has-error]="notificationShortDescControl.invalid && notificationShortDescControl.touched">
+    <ion-row>
+      Short Desc
+    </ion-row>
+    <ion-row>
+      <ion-input #notificationShortDescControl required type="text" placeholder="Short Desc" [(ngModel)]="notification.ShortDesc"  name="shortDesc"  #notificationShortDescControl="ngModel"></ion-input>
+    </ion-row>
+  
+  </div>
+  <div class="form-group" [class.has-error]="fromDateControl.invalid && fromDateControl.touched">
+    <ion-row>
+      Start Date
+    </ion-row>
+    <ion-row>
+        <ion-datetime required display-format="DD/MM/YYYY" min="2018" max="2030-12-31" [(ngModel)]="notification.FromDate"  name="fromDate"  #fromDateControl="ngModel"></ion-datetime>
+    </ion-row>
+    <!-- <span class="help-block" *ngIf="eventDateControl.invalid">
+        Enrolment Date is required
+    </span> -->
+  </div>
+  <div class="form-group" [class.has-error]="toDateControl.invalid && toDateControl.touched">
+    <ion-row>
+      Start Date
+    </ion-row>
+    <ion-row>
+        <ion-datetime required display-format="DD/MM/YYYY" min="2018" max="2030-12-31" [(ngModel)]="notification.ToDate"  name="toDate"  #toDateControl="ngModel"></ion-datetime>
+    </ion-row>
+    <!-- <span class="help-block" *ngIf="eventDateControl.invalid">
+        Enrolment Date is required
+    </span> -->
+  </div>
+  <!-- <div class="form-group" [class.has-error]="notificationDescControl.invalid && notificationDescControl.touched">
+    <ion-row>
+      Description
+    </ion-row>
+    <ion-row>
+        <ion-input #notificationDescControl required type="text" placeholder="Description" [(ngModel)]="notification.Description"  name="description"  #notificationDescControl="ngModel"></ion-input>
+    </ion-row>
+    <span class="help-block" *ngIf="notificationDescControl.invalid">
+        Description is required
+    </span>
+  </div> -->
+  <div class="form-group" [class.has-error]="eventDescControl.invalid && eventDescControl.touched">
+    <ion-row>
+      Desc
+    </ion-row>
+    <ion-row>
+      <p-editor #eventDescControl required [(ngModel)]="notification.DetailedDesc" [style]="{'height':'200px'}" name="DetailedDesc"></p-editor>
+    </ion-row>
+  </div>
+  <div class="form-group" >
+    <ion-row>
+        <ion-button  type="button" (click)="saveNotification()" [disabled]="maintainNotification.invalid">Save</ion-button>
+        <ion-button  type="button" (click)="clearNotification()" >Clear</ion-button>
+        <ion-button  type="button" (click)="cancelNotification()" >Cancel</ion-button>
+    </ion-row>
+  </div>
+
+</form>
+

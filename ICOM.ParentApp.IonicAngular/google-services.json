@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "985500189898",
+    "firebase_url": "https://school-parent-app-223722.firebaseio.com",
+    "project_id": "school-parent-app-223722",
+    "storage_bucket": "school-parent-app-223722.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:985500189898:android:559ed0c7a3c0f1e4",
+        "android_client_info": {
+          "package_name": "com.icom.parentapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "985500189898-mooriiq6hs1fufoivgg0h7mf2a58q4pn.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBjFFj7kjV0blcwDBlmP57qcg6CtUbPq6o"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

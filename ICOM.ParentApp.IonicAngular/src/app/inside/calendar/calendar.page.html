@@ -1,0 +1,36 @@
+<ion-header>
+  <ion-toolbar color="tertiary">
+      <ion-buttons slot="start">
+        <ion-menu-button *ngIf="isUpcomingEventList"></ion-menu-button>
+      </ion-buttons>
+      <ion-row>
+        <ion-icon name="arrow-back" (click)="isUpcomingEventList=true"  *ngIf="!isUpcomingEventList"></ion-icon>
+        <ion-title style="font-weight:400;font-size:20px;">
+            Upcoming Events
+        </ion-title>
+        <ion-icon name="search" style="position:absolute;right:10px;top:10px;font-size:22px;"></ion-icon>
+      </ion-row>
+      
+    <!-- <ion-searchbar (ionInput)="getUpcomingEvents($event)"></ion-searchbar> -->
+  </ion-toolbar>
+</ion-header>
+
+<!-- <ion-content padding>
+    <mat-accordion>
+      <mat-expansion-panel *ngFor="let panel of panels">
+        <mat-expansion-panel-header>
+          {{panel.title}}
+        </mat-expansion-panel-header>
+          {{panel.content}}
+      </mat-expansion-panel>
+    </mat-accordion>
+    <app-google-maps></app-google-maps>  
+    
+</ion-content> -->
+<ion-content>
+  <!-- <div class="login__overlay" style="background-image: url(/assets/images/menuBackground.png);"> -->
+    <app-upcomingevents-list (clickUpComingChild)="clickUpcomingParent($event)" [hidden]="!isUpcomingEventList"></app-upcomingevents-list>
+    <app-upcomingevents-detail (clickUpComingDetailChild)="clickUpComingDetailParent($event)" [hidden]="isUpcomingEventList" ></app-upcomingevents-detail>
+    <!-- <app-google-maps [hidden]="isUpcomingEventList"></app-google-maps> -->
+  <!-- </div> -->
+</ion-content>

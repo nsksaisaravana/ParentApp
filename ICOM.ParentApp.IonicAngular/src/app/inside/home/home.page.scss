@@ -1,0 +1,337 @@
+.ion-color-tertiary {
+  --ion-color-base: #802632 !important;
+}
+
+.cardImg                    {padding-left: 185px;padding-right: 15px;margin-top: 10px;}/*padding-left: 185px*/
+
+.card-content-ios           {padding: 0 !important;}
+
+.login__overlay             {top: 0;left: 0;width: 100%;height: 45vh;background-size: 100% 100%;background-position: center center;margin-bottom:/*4*/0px}
+.iconSection                { height: 44vh;position: absolute;width: 100%;}
+
+.ioncardtitle               {font-size:14px; font-weight: 700; text-align: center; letter-spacing: 0.2em; position: relative; bottom: 18px;}
+.cardImg > img              {height: 80px !important;width: 80px !important;}
+//.login__imageTemp {
+    //position: relative;
+    //width: 100%;
+    // max-height: 450px;
+    // background-size: 100% 100%;
+    // background-position: center center;
+//}
+
+.cardRow {
+  // position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  //height: 33vh;
+  background-size: 100% 100%;
+  background-position: center center;
+  position: relative;
+}
+
+.login__imageTemp {
+    position: absolute;
+    width: 43%;
+    top: 0;
+    left: 30%;
+    height:100%;
+}
+
+// .innerBody {
+//     position: absolute;
+//     top: 285px;
+//     left: 0;
+//     width: 100%;
+//     background-size: 100% 100%;
+//     background-position: center center;
+// }
+
+.innerBody {
+    position: absolute;
+    top: 300px;
+    width: 100%;
+}
+
+.container {
+    text-align: center;
+    margin-top:25px;
+}
+
+.container span {
+    color: white;
+    font-size: 22px;
+}
+
+
+.photo {
+	height:100%;
+	overflow: hidden;
+	position: relative;
+}
+
+.photo-name {
+	/*margin-top: 245px;*/
+	/*padding: 0.5em;*/
+  position: absolute;
+  width:100%;
+  color:white;
+  text-align: center;
+  bottom: 30px;
+ 
+	/*background-color: #666666;*/
+}
+
+ion-card{height:15vh;}
+
+@media only screen and (max-width: 768px)and (orientation: portrait)  {
+    /* For mobile phones: */
+    .ioncol                     {width:100px !important}
+    .login__overlay             {height:40vh}
+    .login__imageTemp           {width:70%;left: 18%;}
+    .cardImg > img              {height: 70px !important;width: 80px !important;}
+    .container span             {font-size:14px !important;}
+
+    .innerBody                  {top: 150px;}
+    .cardImg                    {padding-left:15px !important;}
+    .ioncardtitle               {font-size:8px !important;padding:0px !important;}
+    .photo {
+        height:73%;
+       
+    }
+}
+@media only screen and (max-width: 768px)and (orientation: landscape)  {
+    /* For mobile phones: */
+    .login__overlay             {height:40vh}
+    .login__imageTemp           {width: 25%;left: 38%;}
+
+    .cardImg                    {margin-left:50px !important;margin-right:50px !important;padding-left:20px !important;}
+    .cardImg > img              {height: 80px !important;width: 80px !important;}
+    .container span             {font-size:10px !important;}
+    ion-card{height:30vh;}
+}
+
+
+
+/* IPad portrait */
+@media only screen 
+  and (min-device-width: 768px) 
+  and (max-device-width: 1024px) 
+  and (orientation: portrait) 
+  and (-webkit-min-device-pixel-ratio: 1) {
+    .login__overlay                 {height:50vh !important;}
+    .container span                 {font-size: 24px !important;}
+    .ioncardtitle                   {font-size:18px !important;}
+    .cardImg                        {padding-left:60px !important;}
+    .cardImg > img                  {height:120px !important;width:120px !important}
+    .photo {
+        height:80%;
+        font-size:20px;
+    }
+    ion-card{height:15vh;}
+}
+
+/* IPad landscape */
+@media only screen 
+  and (min-device-width: 768px) 
+  and (max-device-width: 1024px) 
+  and (orientation: landscape) 
+  and (-webkit-min-device-pixel-ratio: 1) {
+    .login__imageTemp               {width: 50%;left: 25%;}
+    .innerBody                      {top:35px}
+    .container span                 {font-size: 24px !important;}
+    .ioncardtitle                   {font-size:14px !important;padding:0px !important;}
+    .cardImg                        {padding-left:60px !important;}
+    .cardImg > img                  {height:100px !important;width:100px !important}
+    .photo {
+        height:80%;
+        font-size:20px;
+    }
+    .login__overlay                 {height:45vh !important;}
+    ion-card{height:15vh;}
+}
+
+/*Ipad PRO - Potrait*/
+@media only screen 
+  and (min-device-width: 1024px) 
+  and (max-device-width: 1024px) 
+  and (orientation: portrait) 
+  and (-webkit-min-device-pixel-ratio: 2) {
+    .login__overlay                 {height:50vh !important;}
+    .ioncardtitle                   {font-size:20px !important;padding:0px;}
+    .cardImg                        {padding-left:40px !important;}
+    .cardImg > img                  {height:150px !important;width:150px !important}
+    .container span                 {font-size: 30px;}
+    .login__imageTemp               {position: absolute;width: 70% !important;top: 0 !important;left: 16% !important;}
+    .card-content-md                {padding-bottom: 16px !important;}
+    .photo {
+        height:65%;
+        font-size:25px;
+    }
+    ion-card{height:15vh;}
+}
+/*Ipad PRO - Lndscape*/
+@media only screen 
+  and (min-device-width: 1366px) 
+  and (max-device-width: 1366px) 
+  and (orientation: landscape) 
+  and (-webkit-min-device-pixel-ratio: 2) {
+    .ioncardtitle                   {font-size:18px !important;padding:0px;}
+    .cardImg                        {padding-left:115px !important;}
+    .cardImg > img                  {height:100px !important;width:100px !important}
+    .container span                 {font-size: 30px;}
+    .login__imageTemp               {width: 48% !important;top: 0;left: 28% !important;}
+    .photo {
+        height:70%;
+        font-size:25px;
+    }
+    ion-card{height:14vh;}
+}
+
+
+ /* Samsung s10 landscape */
+ @media only screen 
+ and (max-device-width : 869px) 
+ and (min-device-width : 412px) 
+ and (orientation : landscape) {
+     .login__imageTemp               {width: 25% !important;left: 38% !important;}
+     ion-card                        {height:30vh !important;}
+     .cardImg                        {padding-left:95px !important;}
+     .cardImg > img                  {height:80px !important;width:80px !important}
+ }
+
+/*Galaxy*/
+@media screen 
+and (min-device-width: 360px) 
+and (max-device-width:640px)
+and (-webkit-min-device-pixel-ratio: 3)
+and (orientation: portrait) {
+    .card-content-md{padding-bottom: 0px !important;}
+}
+
+
+/* iPhone 5 & 5S in portrait */
+@media only screen 
+and (min-device-width : 320px) 
+and (max-device-width : 568px) 
+and (orientation : portrait) {
+    .ioncardtitle           {padding:0px !important;} 
+    .photo-name             {font-size:14px;}
+}
+
+/*IPhone X  */
+@media only screen 
+  and (min-device-width: 375px) 
+  and (max-device-width: 812px) 
+  and (-webkit-min-device-pixel-ratio: 3)
+  and (orientation: landscape) { 
+    .login__imageTemp 	{width:25% !important; left:38% !important;top:0 !important;}
+    .innerBody		    {top:0 !important;}
+    .container > span   {font-size:15px !important;}
+    .cardImg		    {padding-left: 25vh !important;padding-right:25vh;}/*{padding-left: 90px !important;padding-right: 90px;}*/
+    .cardImg > img 		{height: 80px !important;width: 80px !important;}
+    .ioncardtitle       {font-size: 12px !important;} 
+    .photo {
+        height:90% !important;
+    }
+    .photo-name {
+      bottom: 0px;
+    }
+    ion-card{height:30vh;}
+}
+
+@media only screen 
+  and (min-device-width: 375px) 
+  and (max-device-width: 812px) 
+  and (-webkit-min-device-pixel-ratio: 3)
+  and (orientation: portrait) { 
+    .login__overlay     {height:45vh !important;}
+    .login__imageTemp   {top:0%;width:100%;left: 0%;}
+    .cardImg		    {padding-top:15px;}
+  /*.ioncardtitle       {font-size: 10px !important;padding-top:5px;padding-bottom:15px;padding:10px !important;} */
+  .ioncardtitle       {font-size: 9px !important;padding:0px !important;padding-top: 8px !important}
+    .photo {
+        height:75%;
+    }
+    .photo-name {
+        bottom: 40px;
+      }
+      ion-card{height:15vh;}
+}
+
+
+/*Pixel 2 XL */
+@media only screen 
+  and (min-device-width: 411px) 
+  and (max-device-width: 823px) 
+  and (orientation: portrait) { 
+    .card-content-md        {padding-top: 0px !important;}
+    .ioncardtitle           {font-size: 14px !important;padding:11px} 
+    .photo-name {
+        bottom: 30px;
+         
+      }
+}
+@media only screen 
+  and (min-device-width: 411px) 
+  and (max-device-width: 823px) 
+  and (orientation: landscape) {
+    .cardImg		    {padding-left: 80px !important;} 
+    .card-content-md {padding-top:0px !important;}
+    ion-card{height:30vh;}
+ 
+}
+/* iPhone 6, 7, & 8 Plus in portrait */
+@media only screen 
+and (min-device-width : 414px) 
+and (max-device-width : 736px) {
+    .ioncardtitle           {padding:10px !important;} 
+    .photo-name             {bottom:0px;}
+    .login__imageTemp       {top:0%;}
+    .cardImg{padding-right: 0vh;padding-left:6vh !important;}
+
+}
+/*Pixel 2 Potrait*/
+@media only screen 
+and (min-width: 411px)
+and (max-width: 731px)
+ {
+    .cardImg                {padding-left: 20px !important;padding-right: 20px !important;}
+    .ioncardtitle           {font-size: 8px !important;padding:5px !important;} 
+}
+/*Pixel 2 XL */
+@media only screen 
+  and (min-device-width: 411px) 
+  and (max-device-width: 823px) 
+  and (orientation: landscape) { 
+    .login__imageTemp   {top:0%;width:28%;left:35%;}
+    .ioncardtitle           {padding:0px !important } 
+    .photo {
+        height:100%;
+    }
+    
+    .photo-name {
+      bottom: 0px;
+       
+    }
+    /* Galaxy S5 landscape */
+@media screen 
+and (min-device-width: 360px) 
+and (max-device-width:640px)
+and (-webkit-min-device-pixel-ratio: 3)
+and (orientation: landscape) {
+    .login__overlay     {height:40vh !important;}
+    .login__imageTemp   {top:0%;}
+    .cardImg		    {padding-top:0px;padding-left: 0px !important;padding-right: 0px !important;margin-top: 0px;margin-left: 16vh !important;margin-right: 0px !important;}
+    .ioncardtitle       {font-size: 10px !important;padding-top:0px;padding-bottom:0px;} 
+    ion-card{height:30vh;}
+}
+/* iPhone 5 & 5S */
+@media only screen 
+and (min-device-width : 320px) 
+and (max-device-width : 568px) 
+and (orientation : landscape) {
+  .cardImg		    {padding-left: 0px !important;padding-right:0px !important;}
+}
+
+}

@@ -1,0 +1,35 @@
+
+<div *ngIf="newsLetterItems.length >0">
+  <mat-accordion>
+    <!-- <div class="login__overlay" style="background-image: url(/assets/images/menuBackground.png);"> -->
+    <mat-expansion-panel *ngFor="let newsType of newsTypesDetails">
+      <mat-expansion-panel-header style="background: rgba(150, 0, 12, 0.04) !important;">
+          <div style="font-size:16px !important;" class="calendarMonth">{{newsType}}</div> <div class="eventNo">{{returnEventCountByNewsType(newsType)}}</div>
+      </mat-expansion-panel-header>
+      <ion-list *ngFor="let newsItem of newsLetterItems | newsTypePipe:newsType" no-lines>
+        <ion-item (click)="newsletterItemClick(newsItem)" no-padding no-lines>
+         <!-- <ion-card style="width:400px;">
+              <ion-card-header>
+                  <ion-row justify-content-between>
+                    <ion-col style="max-width:120px !important;padding:0px !important;">
+                        <input type="checkbox">
+                      <span class="calendarDate">{{newsItem.Title}}</span>  
+                    </ion-col>
+                  </ion-row>
+              </ion-card-header>
+          </ion-card>-->
+         <div style="width:100%;">
+            <!-- <div class="newstitle"> <input type="checkbox" style="margin: 10px;">{{newsItem.Title}}</div> -->
+            <div class="newstitle">{{newsItem.Title}}</div>
+            <!-- <div class="newsdate">02, September 2019</div> -->
+            <div class="newsdate">{{newsItem.ModifiedDate | date:'d MMM yyyy'}}</div>
+            <div class="newsDetails">{{newsItem.ShortDesc}}</div>
+         </div>
+         <div #viewer class="viewer"></div>
+
+        </ion-item>
+      </ion-list>
+    </mat-expansion-panel>
+  </mat-accordion>
+  
+

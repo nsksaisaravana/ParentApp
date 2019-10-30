@@ -1,0 +1,10 @@
+<ion-row style="max-width:300px">
+  <div id="signature-pad" class="m-signature-pad form-group" >
+    <div class="m-signature-pad-body">
+      <signature-pad [options]="signaturePadOptions" style="max-width:300px"></signature-pad>
+    </div>
+    <span class="help-block" *ngIf="isSignaturePadNotSigned">
+      Signature is required
+    </span>
+  </div>
+</ion-row>

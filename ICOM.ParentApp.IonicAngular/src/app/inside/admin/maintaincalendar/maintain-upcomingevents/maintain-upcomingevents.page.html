@@ -1,0 +1,17 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+        <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Maintain UpComing Events</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <app-upcomingevents-newedit [hidden]="showUpcomingEventsList" (clickMaintainEventDetailChild)="clickMaintainEventDetailParent($event)" [hidden]="showUpcomingEventsList"></app-upcomingevents-newedit >
+  <app-upcomingevents-list (clickMaintainEventListChild)="clickMaintainEventListParent($event)" [hidden]="!showUpcomingEventsList"></app-upcomingevents-list>
+  <!-- <app-upcomingevents-newedit></app-upcomingevents-newedit> -->
+  <!-- <p-sidebar [(visible)]="!showUpcomingEventsList" styleClass="ui-sidebar-md" position="right">
+      <app-upcomingevents-newedit></app-upcomingevents-newedit>
+  </p-sidebar> -->
+</ion-content>

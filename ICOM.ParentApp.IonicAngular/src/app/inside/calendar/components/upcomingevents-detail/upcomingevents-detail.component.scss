@@ -1,0 +1,77 @@
+
+.imageContainer         {max-width:300px}
+.imageCalendar          {width:75%;margin-left:12px;}
+
+.calendarDate{   position: relative;
+    bottom: 100px;
+    left: 55px;
+    font-size: 35px;
+    text-transform: uppercase;
+}
+
+@media only screen and (max-width: 768px)and (orientation: portrait)  {
+    .calendarDate{
+        bottom: 70px !important;
+        font-size: 25px !important;
+    }
+}
+
+@media screen and (device-width: 360px) 
+and (device-height: 640px) 
+and (-webkit-device-pixel-ratio: 3)
+and (orientation: portrait)  {
+    .calendarDate{
+        bottom: 60px !important;
+        font-size: 18px !important;
+        left: 35px !important;
+    }
+}
+
+/*Iphone 5/SE portrait*/
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 568px)
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: portrait) {
+    .calendarDate{
+        bottom: 55px !important;
+        font-size: 20px !important;
+        left: 25px !important;
+    }
+}
+/*iPhone 6, 7, & 8 in portrait*/
+@media only screen 
+and (min-device-width : 375px) 
+and (max-device-width : 667px) 
+and (orientation : portrait) { 
+    .calendarDate{
+        bottom: 55px !important;
+        font-size: 20px !important;
+        left: 35px !important;
+    }
+}
+/*iPhone 6, 7, & 8 Plus in portrait*/
+@media only screen 
+and (min-device-width : 414px) 
+and (max-device-width : 736px) 
+and (orientation : portrait) { 
+    .calendarDate{
+        bottom: 65px !important;
+        font-size: 20px !important;
+        left: 45px !important;
+    }
+}
+
+/* IPad portrait */
+@media only screen 
+  and (min-device-width: 768px) 
+  and (max-device-width: 1024px) 
+  and (orientation: portrait) 
+  and (-webkit-min-device-pixel-ratio: 1) {
+    .calendarDate{
+        bottom: 100px !important;
+        font-size: 40px !important;
+        left: 45px !important;
+    }
+   
+}

@@ -1,0 +1,44 @@
+<div *ngIf="upcomingEventDetails.length >0">
+<mat-accordion>
+  <!-- <div class="login__overlay" style="background-image: url(/assets/images/menuBackground.png);"> -->
+  <mat-expansion-panel *ngFor="let month of eventMonths">
+    <mat-expansion-panel-header>
+        <div class="calendarMonth">{{month}}</div> <div class="eventNo">{{returnEventCountByMonth(month)}}</div>
+    </mat-expansion-panel-header>
+    <ion-list *ngFor="let upcomingEvent of upcomingEventDetails | eventmonth:month" no-lines>
+      <ion-item (click)="upcomingItemClick(upcomingEvent)" no-padding no-lines>
+        <ion-card style="width:400px;">
+            <ion-card-header>
+                <ion-row justify-content-between>
+                  <ion-col style="max-width:120px !important;padding:0px !important;"><!-- col-auto-->
+                    <!-- <ion-icon ios="ios-calendar" md="md-calendar"></ion-icon> -->
+                    <img src="/assets/images/calendar.png" style="width:90%;margin-left:15px;" item-left/>
+                    <span class="calendarDate">{{upcomingEvent.EventDate | date:'EE'}}</span><br>
+                    <span class="calendarDate">{{upcomingEvent.EventDate | date:'dd MMM'}}</span>
+                  </ion-col>
+                  <ion-col>
+                    <!--ion-row text-wrap -->
+                      <!--<span><ion-icon style="position:relative;font-size:25px;color:#1E73BE;" name="pin"></ion-icon></span>-->
+                      <!--p style="margin-top:0;font-weight:400;"><span><ion-icon style="position:relative;font-size:25px;color:#1E73BE;" name="pin"></ion-icon></span>{{upcomingEvent.EventAddress}}</p>
+                    </ion-row> -->
+                   
+                    <!---ion-row text-wrap>
+                      <span><ion-icon style="position:relative;font-size:25px;color:#1E73BE;" name="time"></ion-icon></span>
+                      <p style="margin-top:0;">{{upcomingEvent.EventStartTime | date:'shortTime'}} - {{upcomingEvent.EventEndTime | date:'shortTime'}}</p>
+                    </ion-row-->
+                    <ion-row text-wrap>
+                      <p style="font-size:20px;margin-top:0px;padding-left:5px;margin-bottom:5px;">{{upcomingEvent.Title}}</p>
+                    </ion-row>
+                    <ion-row text-wrap>
+                      <p style="margin-top:0px;padding-left:5px;font-size:16px">{{upcomingEvent.EventShortDesc}}</p>
+                    </ion-row>
+                  </ion-col>
+                </ion-row>
+            </ion-card-header>
+        </ion-card>
+      </ion-item>
+    </ion-list>
+  </mat-expansion-panel>
+  <!-- </div> -->
+</mat-accordion>
+</div>

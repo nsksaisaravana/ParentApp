@@ -1,0 +1,36 @@
+<table mat-table [dataSource]="notificationDetails" class="mat-elevation-z8">
+
+  <!--- Note that these columns can be defined in any order.
+        The actual rendered columns are set as a property on the row definition" -->
+
+  <!-- Position Column -->
+  <ng-container matColumnDef="Title">
+    <th mat-header-cell *matHeaderCellDef>Title <ion-icon name="add" (click)="addNewNotifications()"></ion-icon></th>
+    <td mat-cell *matCellDef="let element"> {{element.Title}} </td>
+  </ng-container>
+
+  <!-- Name Column -->
+  <ng-container matColumnDef="ShortDesc">
+    <th mat-header-cell *matHeaderCellDef> Desc </th>
+    <td mat-cell *matCellDef="let element"> {{element.ShortDesc}} </td>
+  </ng-container>
+
+  <!-- Weight Column -->
+  <ng-container matColumnDef="FromDate">
+    <th mat-header-cell *matHeaderCellDef> From Date </th>
+    <td mat-cell *matCellDef="let element"> {{element.FromDate | date}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="ToDate">
+    <th mat-header-cell *matHeaderCellDef> To Date </th>
+    <td mat-cell *matCellDef="let element"> {{element.ToDate | date}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="Actions">
+      <th mat-header-cell *matHeaderCellDef> Action </th>
+      <td mat-cell *matCellDef="let element"> <button md-raised-button (click)="itemClickedForEdit(element)">Edit</button> <button md-raised-button (click)="itemClickedForDelete(element)">Delete</button>  </td>
+    </ng-container>
+
+  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+  <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+</table>

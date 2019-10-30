@@ -1,0 +1,55 @@
+.m-signature-pad{
+    position: relative;
+    font-size: 10px;
+    width:300px;
+    border:1px solid #e8e8ee;
+    background-color: #fff;
+    margin-top: 5px;
+}
+.m-signature-pad-body{
+    height: 150px;
+}
+
+canvas {
+   width:290px !important;
+}
+
+.login__overlay             {position: absolute;top: 0;left: 0;width: 100%;height: 100%;background-size: 100% 100%;background-position: center center;}
+.divContainer               {margin:20px 1px;padding:20px;background: #ffffff17;}
+.classDiv, .m-signature-pad-body                   {width:300px}
+.datestyle{border: 1px solid #dedede;min-width:300px}
+
+/*button styling*/
+.customButton{
+    --border-radius:5px !important;
+    height:36px;
+    width:90px;
+    margin-right:3px;
+}
+.customInput{
+    --inner-border-width: 0px 0px 0px 0px !important;
+    --highlight-height: 0px !important;
+    --border-style: none !important;
+}
+@media only screen and (max-width: 768px)and (orientation: landscape)  {
+    .login__overlay {height:168vh;}
+}
+
+/*iPhone 5 & 5S in portrait*/
+@media only screen 
+and (min-device-width : 320px) 
+and (max-device-width : 568px) 
+and (orientation : portrait) {
+    .m-signature-pad-body                 {width:300px !important;height:155px}
+}
+@media only screen 
+and (min-device-width : 320px) 
+and (max-device-width : 568px) 
+and (orientation : landscape) {
+    .login__overlay                       {height:185vh !important}
+}
+
+/*PIXEL 2 XL*/
+@media only screen and (min-device-width : 411px)  and (max-device-width : 823px)  and (orientation: landscape)  {
+    .login__overlay {height:160vh;}
+}

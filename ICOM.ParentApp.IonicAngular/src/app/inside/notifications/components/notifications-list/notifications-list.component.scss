@@ -1,0 +1,21 @@
+.notificationTitle{width:75%;vertical-align: text-top !important;padding-top: 10px;font-weight: 500;}
+.notificationDetails{width:50vh;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;margin-top: 10px;font-weight: lighter;font-size: 14px;margin-bottom: 10px;}
+.notificationDate{width:15%;vertical-align: text-top !important;padding-top: 10px;font-weight:lighter;font-size: 11px;color: gray;}
+
+@media (min-width: 992px)and (max-width: 1199px) { 
+	
+    .notificationDetails{width:30vh;}
+ }
+
+@media (min-width: 576px)and (max-width: 991px) { 
+	
+ }
+
+@media (max-width: 767px) { 
+    .notificationDetails{width:25vh;}
+    .notificationDate{width:30%;}
+
+    td.mat-cell:last-of-type, td.mat-footer-cell:last-of-type, th.mat-header-cell:last-of-type {
+        padding-right: 0px !important;
+    }
+ }

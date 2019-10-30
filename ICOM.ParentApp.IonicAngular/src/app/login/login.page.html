@@ -1,0 +1,76 @@
+<!-- <ion-header>
+  <ion-toolbar>
+    <ion-title>login</ion-title>
+  </ion-toolbar>
+</ion-header> -->
+
+<!-- <ion-content padding> -->
+<ion-content>  
+  <div class="login__overlay" style="background-image: url(/assets/images/overlayLogin.png);">
+    <!-- <div class="login__overlay" style="background-image: url(/assets/images/overlayLogin.png);"></div> -->
+   
+   <img class="login__imageTemp" src="/assets/images/ICOM-LogoNew.png">
+   <!-- <div class="innerBody">
+      <div class="container">
+        <span>ISLAMIC COLLEGE OF MELBOURNE</span>
+      </div>
+    </div>-->
+
+  <!--  <table>
+        <tr>
+           <td> <img class="logo" src="/assets/images/ICOM-Logo.png" >
+              <div style="color:white;text-align: center;    position: absolute;
+              bottom: 115px;left: 50%;
+              transform: translate(-50%, -50%);
+              font-size: 18px;
+              width: 100%;">ISLAMIC COLLEGE OF MELBOURNE</div>
+            </td>
+           
+        </tr>
+        <tr>
+            <td style="color:white;text-align: center;">ISLAMIC COLLEGE OF MELBOURNE</td>
+        </tr>
+      </table>-->
+   
+  </div>
+
+
+<form #loginForm="ngForm" class="loginForm">
+  <div class="row">
+      <div >
+      <div padding class="form-group" style="padding-bottom:5px;" [class.has-error]="userNameControl.invalid && userNameControl.touched">
+        
+          <!-- <ion-label position="floating">Username</ion-label> -->
+          <ion-input padding required type="text" placeholder="Username" class="loginInput" value="" [(ngModel)]="userName"  name="userName" #userNameControl="ngModel"></ion-input>
+          <!-- <span class="help-block" *ngIf="userNameControl.invalid">
+              UserName is required
+          </span> -->
+        
+      </div>
+      <!-- <div class="rowSpacer"></div> -->
+      <div padding class="form-group" style="padding-top:5px;" [class.has-error]="passwordControl.invalid && passwordControl.touched">
+        <!-- <ion-item> -->
+          <!-- <ion-label position="floating">Password</ion-label> -->
+          <ion-input padding required type="password" placeholder="Password" class="loginInput" [(ngModel)]="passwordValue"  name="passwordValue" #passwordControl="ngModel" (keyup.enter)="login()"></ion-input>
+          <!-- <span class="help-block" *ngIf="passwordControl.invalid">
+              Password is required
+          </span> -->
+        <!-- </ion-item> -->
+      </div>
+    
+      <!-- <ion-button type="button" expand="full"  (click)="login()" [disabled]="loginForm.invalid">Login</ion-button> -->
+      <ion-button padding block="" type="button" class="btn disable-hover disable-focus button button-ios button-default button-default-ios button-block button-block-ios" (click)="login()" [disabled]="loginForm.invalid"><span class="button-inner">
+        LOG IN
+      </span>
+      <!-- <div *ngIf="isShowSpinner">
+        <ion-spinner></ion-spinner>
+      </div> -->
+      </ion-button>
+    </div>
+      <div class="contactICOM"><span padding>Don't have an account? Contact <a href="mailto:ITSupport@icom.vic.edu.au" style="color:#96000C;text-decoration:underline;">ICOM</a> to request access.</span></div>
+  </div>
+</form>
+</ion-content>
+
+
+

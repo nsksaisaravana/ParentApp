@@ -1,0 +1,51 @@
+<!--<div class="login__overlay" style="background-image: url(/assets/images/menuBackground.png);">
+  <div style="background:rgba(255,255,255,.5)">
+    <ion-card>
+      <div class="divContainer">
+        <img style="max-width: 100%;max-height: 100%;" [src]="newsLetterDetailImage" />
+      </div>
+      <ion-card-header>
+        <ion-card-title class="newsTitle">{{newsLetterDetailTitle}}</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <!-- <p>{{newsLetterDetailsPublishingContent}}</p> -->
+        <!--<div class="newsContent" innerHTML={{newsLetterDetailsPublishingContent}}></div>
+      </ion-card-content>
+    </ion-card>
+  </div>
+</div>-->
+
+<!-- <div class="login__overlay" style="background-image: url(/assets/images/menuBackground.png);">
+  <div style="background:rgba(255,255,255,.5)">
+    
+      <div class="imgContainer">
+        <img style="max-width: 100%;max-height: 100%;" [src]="newsLetterDetailImage" />
+      </div>
+      <div class="newsTitle">{{newsLetterDetailTitle}}</div>
+	  <div class="newsContent" innerHTML={{newsLetterDetailsPublishingContent}}></div>
+     
+  </div>
+</div> -->
+<!--<div>
+  <p>{{newsLetterDetailTitle}}</p>
+  <p>Last Updated {{newsLetterUpdatedDate}}</p>
+  <br>
+  <p>{{newsLetterDetailsPublishingContent}}</p>
+  <br>
+  <div><ion-icon name="download" (click)="downloadFile()"></ion-icon></div>
+</div>-->
+<!-- <div>{{blobUrl}}</div> -->
+
+<div class="mainContainer">
+    <div class="newsTitle">{{newsLetterDetailTitle}}</div>
+    
+    <div class="newsUpdatedDate">Last Updated : {{newsLetterUpdatedDate}}</div>
+    <div class="newsDetails">{{newsLetterDetailsPublishingContent}}</div>
+    
+      <!-- <div class="download">Sample.pdf<ion-icon name="download" (click)="downloadFile()"></ion-icon></div> -->
+      <div class="download">
+        <!-- <img src="/assets/icons/pdf.png" style="width:30px;vertical-align: middle;"/><span style="display: inline-block;vertical-align: middle;"> {{notificationFileName}}</span><ion-icon name="cloud-download" style="float:right !important;margin-right:5px !important;font-size: 20px;" (click)="downloadFile()"></ion-icon> -->
+        <a (click)="downloadFile()"><img src="/assets/icons/pdf.png" style="width:30px;vertical-align: middle;margin-right: 15px"/><span style="display: inline-block;vertical-align: middle;"> {{newsLetterFilename}}</span><img src="/assets/icons/download.png" style="width:30px;float:right !important;margin-right:5px !important;font-size: 20px;" ></a>
+      </div>
+    
+    </div>

@@ -1,0 +1,113 @@
+<form #maintainUpComingEvents="ngForm">
+  <div class="form-group" [class.has-error]="eventNameControl.invalid && eventNameControl.touched">
+    <ion-row>
+      Event Name
+    </ion-row>
+    <ion-row>
+      <ion-item>
+        <ion-input #eventNameControl required type="text" placeholder="Event Name" [(ngModel)]="upcomingEvent.Title"  name="EventName" #eventNameControl="ngModel"></ion-input>
+      </ion-item>
+      <!-- <span class="help-block" *ngIf="eventNameControl.invalid">
+          Event Name is required
+      </span> -->
+    </ion-row>
+  </div>
+  <div class="form-group" [class.has-error]="eventDateControl.invalid && eventDateControl.touched">
+    <ion-row>
+      Start Date
+    </ion-row>
+    <ion-row>
+        <ion-datetime required display-format="DD/MM/YYYY" min="2018" max="2030-12-31" [(ngModel)]="upcomingEvent.EventDate"  name="eventDate"  #eventDateControl="ngModel"></ion-datetime>
+    </ion-row>
+    <!-- <span class="help-block" *ngIf="eventDateControl.invalid">
+        Enrolment Date is required
+    </span> -->
+  </div>
+  <div class="form-group" [class.has-error]="eventStartTimeControl.invalid && eventStartTimeControl.touched">
+    <ion-row>
+      Start Time
+    </ion-row>
+    <ion-row>
+        <ion-datetime required displayFormat="h:mm A" pickerFormat="h mm A" [(ngModel)]="upcomingEvent.EventStartTime"  name="eventStartTimeDate"  #eventStartTimeControl="ngModel"></ion-datetime>
+    </ion-row>
+    <!-- <span class="help-block" *ngIf="eventStartTimeControl.invalid">
+        Event Start Time is required
+    </span> -->
+  </div>
+  <div class="form-group" [class.has-error]="eventEndTimeControl.invalid && eventEndTimeControl.touched">
+    <ion-row>
+      Start Time
+    </ion-row>
+    <ion-row>
+        <ion-datetime required displayFormat="h:mm A" pickerFormat="h mm A" [(ngModel)]="upcomingEvent.EventEndTime"  name="eventEndTime"  #eventEndTimeControl="ngModel"></ion-datetime>
+    </ion-row>
+    <!-- <span class="help-block" *ngIf="eventEndTimeControl.invalid">
+      Event End Time is required
+    </span> -->
+  </div>
+  <div class="form-group" [class.has-error]="eventAddressControl.invalid && eventAddressControl.touched">
+    <ion-row>
+      Address
+    </ion-row>
+    <ion-row>
+      <ion-item>
+        <ion-input #eventAddressControl required type="text" placeholder="Address" [(ngModel)]="upcomingEvent.EventAddress"  name="Address" #eventAddressControl="ngModel"></ion-input>
+      </ion-item>
+      <!-- <span class="help-block" *ngIf="eventAddressControl.invalid">
+          Event Desc is required
+      </span> -->
+    </ion-row>
+  </div>
+  <div class="form-group" [class.has-error]="eventShortDescControl.invalid && eventShortDescControl.touched">
+    <ion-row>
+      Short Desc
+    </ion-row>
+    <ion-row>
+      <ion-item>
+        <ion-input #eventShortDescControl required type="text" placeholder="Short Desc" [(ngModel)]="upcomingEvent.EventShortDesc"  name="ShortDesc" #eventShortDescControl="ngModel"></ion-input>
+      </ion-item>
+      <!-- <span class="help-block" *ngIf="eventAddressControl.invalid">
+          Event Desc is required
+      </span> -->
+    </ion-row>
+  </div>
+  <div class="form-group" [class.has-error]="eventDescControl.invalid && eventDescControl.touched">
+    <ion-row>
+      Desc
+    </ion-row>
+    <ion-row>
+      <!-- <ion-item> -->
+        <!-- <ion-textarea #eventDescControl required type="text" placeholder="Description" [(ngModel)]="upcomingEvent.EventDesc"  name="EventDesc" #eventDescControl="ngModel"></ion-textarea> -->
+        <p-editor #eventDescControl required [(ngModel)]="upcomingEvent.EventDesc" [style]="{'height':'200px'}" name="EventDesc"></p-editor>
+      <!-- </ion-item> -->
+      <!-- <span class="help-block" *ngIf="eventDescControl.invalid">
+          Event Desc is required
+      </span> -->
+    </ion-row>
+  </div>
+  <!-- <div class="form-group" > 
+    <ion-row>
+      Address
+    </ion-row>
+    <ion-row>
+      <ion-item>
+        <ion-input #eventAddressControl type="text"></ion-input>
+        <input placeholder="search for location"  #search >
+      </ion-item>
+      <span class="help-block" *ngIf="eventAddressControl.invalid">
+          Address is required
+      </span>
+      <agm-map [latitude]="latitude" [longitude]="longitude" [scrollwheel]="false" [zoom]="zoom">
+          <agm-marker [latitude]="latitude" [longitude]="longitude"></agm-marker>
+      </agm-map>
+    </ion-row>
+  </div> -->
+  <div class="form-group" >
+    <ion-row>
+        <ion-button  type="button" (click)="saveUpcomingEvent()" [disabled]="maintainUpComingEvents.invalid">Save</ion-button>
+        <ion-button  type="button" (click)="clearUpcomingEvent()" >Clear</ion-button>
+        <ion-button  type="button" (click)="exitUpComingEvent()" >Exit</ion-button>
+    </ion-row>
+  </div>
+
+</form>

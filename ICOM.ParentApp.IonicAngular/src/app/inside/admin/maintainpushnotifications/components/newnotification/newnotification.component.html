@@ -1,0 +1,35 @@
+<form #newNotification="ngForm">
+  <div class="form-group" [class.has-error]="notificationTextControl.invalid && notificationTextControl.touched">
+    <ion-row>
+      <div>Notification text</div>
+    </ion-row>
+    <ion-row>
+      <!-- <ion-input #notificationTextControl required type="text" placeholder="Enter Notification text" [(ngModel)]="notificationText"  name="NotificationText" #notificationTextControl="ngModel"></ion-input> -->
+      <ion-textarea #notificationTextControl required rows="5" cols="20" placeholder="Enter any notes here..." [(ngModel)]="notification.notificationText"  name="NotificationText" #notificationTextControl="ngModel"></ion-textarea>
+    </ion-row>
+  </div>
+  <div class="form-group" [class.has-error]="shortDescControl.invalid && shortDescControl.touched">
+    <ion-row>
+      Short Desc
+    </ion-row>
+    <ion-row>
+      <ion-item>
+        <!-- <ion-input #shortDescControl required type="text" placeholder="Short Desc" [(ngModel)]="newsletter.ShortDesc"  name="ShortDesc" #shortDescControl="ngModel"></ion-input> -->
+        <ion-textarea rows="5" cols="20" #shortDescControl required type="text" placeholder="Short Desc" [(ngModel)]="notification.ShortDesc"  name="ShortDesc" #shortDescControl="ngModel"></ion-textarea>
+      </ion-item>
+    </ion-row>
+  </div>
+  <ion-row>
+    <p-fileUpload mode="basic" name="demo[]" accept="pdf/*" chooseLabel="Upload Newsletter PDF" maxFileSize="1000000" (onSelect)="onUploadPdfFile($event)"></p-fileUpload>
+    <!-- <img  [src]="uploadedImage" *ngIf="uploadedImage"/> -->
+  </ion-row>
+  <ion-row>
+    <span (click)="showPdf()" *ngIf="uploadedPdfBlob">Show Pdf</span>
+  </ion-row>
+  <div>
+    <ion-row>
+      <ion-button  type="button" (click)="publishNotification()"  [disabled]="newNotification.invalid">Send Notification</ion-button>
+      <ion-button  type="button" (click)="cancelPushNotification()" >Cancel</ion-button>
+    </ion-row>
+  </div>
+</form>

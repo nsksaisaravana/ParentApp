@@ -1,0 +1,33 @@
+<!-- <ion-card>
+  <ion-card-header>
+    <ion-card-title>{{notificationDetailTitle}}</ion-card-title>
+  </ion-card-header>
+  <ion-card-content>
+      <p innerHTML={{notificationDetailedDescription}}></p>
+      
+  </ion-card-content>
+</ion-card> -->
+
+<!--<div>
+  <p>{{notificaitonTitle}}</p>
+  <p>Last Updated {{notificatoinUpdatedDate}}</p>
+  <br>
+  <p>{{notificationDesc}}</p>
+  <br>
+  <div><ion-icon name="download" (click)="downloadFile()"></ion-icon></div>
+</div>-->
+
+<div class="mainContainer">
+<div class="notificaitonTitle">{{notificationTitle}}</div>
+
+<div class="notificatoinUpdatedDate">Last Updated : {{notificationUpdatedDate}}</div>
+<div class="notifcationDetails">{{notificationDesc}}</div>
+
+  <!-- <div class="download">Sample.pdf<ion-icon name="download" (click)="downloadFile()"></ion-icon></div> -->
+  <div class="download" *ngIf="documentExists !='false'">
+    <!-- <img src="/assets/icons/pdf.png" style="width:30px;vertical-align: middle;"/><span style="display: inline-block;vertical-align: middle;"> {{notificationFileName}}</span><ion-icon name="cloud-download" style="float:right !important;margin-right:5px !important;font-size: 20px;" (click)="downloadFile()"></ion-icon> -->
+    <a *ngIf="documentExists !='false'" (click)="downloadFile()"><img src="/assets/icons/pdf.png" style="width:30px;vertical-align: middle;margin-right: 15px"/><span style="display: inline-block;vertical-align: middle;"> {{notificationFileName}}</span><img src="/assets/icons/download.png" style="width:30px;float:right !important;margin-right:5px !important;font-size: 20px;" ></a>
+  </div>
+  <div #viewer class="viewer"></div>
+
+</div>

@@ -1,0 +1,19 @@
+<ion-header>
+  <ion-toolbar color="tertiary">
+    <ion-buttons slot="start" *ngIf="isNotificationList">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-row>
+      <ion-icon name="arrow-back" (click)="isNotificationList=true"  *ngIf="!isNotificationList"></ion-icon>
+      <ion-title>
+        Notifications
+      </ion-title>
+    </ion-row>
+  </ion-toolbar>
+</ion-header>
+<ion-content padding>
+  <!-- <div class="login__overlay" style="background-image: url(/assets/images/menuBackground.png);"> -->
+  <app-notifications-list (clickNotificationChild)="clickNotificationParent($event)" [hidden]="!isNotificationList"></app-notifications-list>
+  <app-notifications-detail (clickNotificationDetailChild)="clickNotificationDetailParent($event)" [hidden]="isNotificationList" ></app-notifications-detail>
+  <!-- </div> -->
+</ion-content>

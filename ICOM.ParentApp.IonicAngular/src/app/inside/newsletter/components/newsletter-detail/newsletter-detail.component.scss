@@ -1,0 +1,19 @@
+
+/*.login__overlay             {position: absolute;top: 0;left: 0;width: 100%;height: 100%;background-size: 100% 100%;background-position: center center;}
+.imgContainer               {max-width: 300px;float: left;margin: 5px;margin: 10px;}
+.newsTitle                  {font-size:20px;margin-top:0px;padding-left:5px;margin-bottom:5px;text-transform: uppercase;font-weight:500;color:rgb(115, 115, 115);padding-top:20px;}
+.newsContent                {padding:5px;font-size:14px;color: #444444;}
+
+
+@media only screen and (max-width: 768px)and (orientation: portrait)  {
+    .imgContainer 			{max-width:200px !important}
+    .newsTitle				{font-size:16px !important}
+    .newsContent			{font-size:12px !important}
+  }*/
+
+.newsTitle{border-bottom: 1px solid #c1c0c0;font-size: 24px; margin: 5px;}
+.newsUpdatedDate{margin: 5px;font-size:14px;color:gray}
+.newsDetails{margin: 20px 0px 0px 5px;padding-bottom: 30px;font-size:16px;font-weight:lighter;border-bottom: 1px solid #c1c0c0;padding-right:20px}
+
+ion-icon{float: right;margin-right: 30px;}
+.download{padding:10px;background: whitesmoke;border-bottom: 1px solid #c1c0c0;}

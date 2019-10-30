@@ -1,0 +1,306 @@
+<ion-header>
+    <ion-toolbar color="tertiary">
+        <ion-buttons slot="start">
+            <ion-menu-button ></ion-menu-button>
+        </ion-buttons>
+      <ion-title>Absence Details</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  
+  <ion-content padding>
+    <form #reEnrolmentForm="ngForm">
+      <!-- <div class="login__overlay" style="background-image: url(/assets/images/menuBackground.png);"> -->
+        <div class="divContainer">
+          <div class="form-group" [class.has-error]="fullNameControl.invalid && fullNameControl.touched">
+            <ion-row>
+              Student's Full Name
+            </ion-row>
+            <ion-row style="border: 1px solid #dedede;max-width:300px">
+              <ion-item class="customInput">
+                <ion-input #fullNameControl required type="text" placeholder="Student's Full Name" [(ngModel)]="absenceDetails.FullName1" name="FullName1"
+                  #fullNameControl="ngModel"></ion-input>
+              </ion-item>
+            </ion-row>
+            <span class="help-block" *ngIf="fullNameControl.invalid" style="font-size:12px">
+              Student's Full Name is required
+            </span>
+          </div>
+
+          <div class="form-group" [class.has-error]="classControl.invalid && classControl.touched" style="margin-top:10px">
+            <ion-row>
+              Class
+            </ion-row>
+            <ion-row style="border: 1px solid #dedede;max-width:300px">
+              <ion-item class="customInput">
+                <ion-input required type="text" placeholder="Class" [(ngModel)]="absenceDetails.Class1" name="Class1" #classControl="ngModel"
+                  #classControl="ngModel"></ion-input>
+              </ion-item>
+            </ion-row>
+            <span class="help-block" *ngIf="classControl.invalid" style="font-size:12px">
+              Class is required
+            </span>
+          </div>
+          <div class="form-group" [class.has-error]="reasonControl.invalid && reasonControl.touched" style="margin-top:10px">
+            <ion-row>
+              Reason
+            </ion-row>
+            <ion-row style="border: 1px solid #dedede;max-width:300px">
+              <ion-item class="customInput">
+                <ion-input required type="text" placeholder="Reason" [(ngModel)]="absenceDetails.Reason1" name="Reason1" #reasonControl="ngModel"
+                  #reasonControl="ngModel"></ion-input>
+                </ion-item>
+            </ion-row>
+            <span class="help-block" *ngIf="reasonControl.invalid" style="font-size:12px">
+              Reason is required
+            </span>
+          </div>
+          <div *ngIf="isSecondChild">
+            <div class="form-group" [class.has-error]="fullNameControl2.invalid && fullNameControl2.touched" style="margin-top:10px">
+              <ion-row>
+                  Student's Full Name
+              </ion-row>
+              <ion-row style="border: 1px solid #dedede;max-width:300px">
+                <ion-item class="customInput">
+                  <ion-input required type="text" placeholder="First Name" [(ngModel)]="absenceDetails.FullName2" name="FullName2" #fullNameControl2="ngModel"></ion-input>
+                </ion-item>
+              </ion-row>
+              <span class="help-block" *ngIf="fullNameControl2.invalid" style="font-size:12px">
+                Full Name is required
+              </span>
+            </div>
+            <div class="form-group" [class.has-error]="classControl2.invalid && classControl2.touched"  style="margin-top:10px">
+              <ion-row>
+                Class
+              </ion-row>
+              <ion-row style="border: 1px solid #dedede;max-width:300px">
+                <ion-item class="customInput">
+                  <ion-input required type="text" placeholder="Class" [(ngModel)]="absenceDetails.Class2" name="Class2" #classControl="ngModel"
+                    #classControl2="ngModel"></ion-input>
+                </ion-item>
+              </ion-row>
+              <span class="help-block" *ngIf="classControl2.invalid" style="font-size:12px">
+                Class is required
+              </span>
+            </div>
+            <div class="form-group" [class.has-error]="reasonControl2.invalid && reasonControl2.touched" style="margin-top:10px">
+              <ion-row>
+                Reason
+              </ion-row>
+              <ion-row style="border: 1px solid #dedede;max-width:300px">
+                <ion-item class="customInput">
+                  <ion-input required type="text" placeholder="Reason" [(ngModel)]="absenceDetails.Reason2" name="Reason2" #reasonControl2="ngModel"
+                    #reasonControl2="ngModel"></ion-input>
+                  </ion-item>
+              </ion-row>
+              <span class="help-block" *ngIf="reasonControl2.invalid" style="font-size:12px;">
+                Reason is required
+              </span>
+            </div>
+          </div>
+          <div *ngIf="isThirdChild">
+            <div class="form-group" [class.has-error]="fullNameControl3.invalid && fullNameControl3.touched"  style="margin-top:10px">
+              <ion-row>
+                  Student's Full Name
+              </ion-row>
+              <ion-row style="border: 1px solid #dedede;max-width:300px">
+                <ion-item class="customInput">
+                  <ion-input required type="text" placeholder="First Name" [(ngModel)]="absenceDetails.FullName3" name="FullName3" #fullNameControl3="ngModel"></ion-input>
+                </ion-item>
+              </ion-row>
+              <span class="help-block" *ngIf="fullNameControl3.invalid" style="font-size:12px">
+                Full Name is required
+              </span>
+            </div>
+            <div class="form-group" [class.has-error]="classControl3.invalid && classControl3.touched" style="margin-top:10px">
+              <ion-row>
+                Class
+              </ion-row>
+              <ion-row style="border: 1px solid #dedede;max-width:300px">
+                <ion-item class="customInput">
+                  <ion-input required type="text" placeholder="Class" [(ngModel)]="absenceDetails.Class3" name="Class3" #classControl="ngModel"
+                    #classControl3="ngModel"></ion-input>
+                </ion-item>
+              </ion-row>
+              <span class="help-block" *ngIf="classControl3.invalid" style="font-size:12px">
+                Class is required
+              </span>
+            </div>
+            <div class="form-group" [class.has-error]="reasonControl3.invalid && reasonControl3.touched" style="margin-top:10px">
+              <ion-row>
+                Reason
+              </ion-row>
+              <ion-row style="border: 1px solid #dedede;max-width:300px">
+                <ion-item class="customInput">
+                  <ion-input required type="text" placeholder="Reason" [(ngModel)]="absenceDetails.Reason3" name="Reason3" #reasonControl3="ngModel"
+                    #reasonControl3="ngModel"></ion-input>
+                  </ion-item>
+              </ion-row>
+              <span class="help-block" *ngIf="reasonControl3.invalid" style="font-size:12px;">
+                Reason is required
+              </span>
+            </div>
+          </div>
+          <div *ngIf="isFourthChild">
+            <div class="form-group" [class.has-error]="fullNameControl4.invalid && fullNameControl4.touched"  style="margin-top:10px">
+              <ion-row>
+                  Student's Full Name
+              </ion-row>
+              <ion-row style="border: 1px solid #dedede;max-width:300px">
+                <ion-item class="customInput">
+                  <ion-input required type="text" placeholder="First Name" [(ngModel)]="absenceDetails.FullName4" name="FullName4" #fullNameControl4="ngModel"></ion-input>
+                </ion-item>
+              </ion-row>
+              <span class="help-block" *ngIf="fullNameControl4.invalid" style="font-size:12px">
+                Full Name is required
+              </span>
+            </div>
+            <div class="form-group" [class.has-error]="classControl4.invalid && classControl4.touched"  style="margin-top:10px">
+              <ion-row>
+                Class
+              </ion-row>
+              <ion-row style="border: 1px solid #dedede;max-width:300px">
+                <ion-item class="customInput">
+                  <ion-input required type="text" placeholder="Class" [(ngModel)]="absenceDetails.Class4" name="Class4" #classControl="ngModel"
+                    #classControl4="ngModel"></ion-input>
+                </ion-item>
+              </ion-row>
+              <span class="help-block" *ngIf="classControl4.invalid" style="font-size:12px;">
+                Class is required
+              </span>
+            </div>
+            <div class="form-group" [class.has-error]="reasonControl4.invalid && reasonControl4.touched" style="margin-top:10px">
+              <ion-row>
+                Reason
+              </ion-row>
+              <ion-row style="border: 1px solid #dedede;max-width:300px">
+                <ion-item class="customInput">
+                  <ion-input required type="text" placeholder="Reason" [(ngModel)]="absenceDetails.Reason4" name="Reason4" #reasonControl4="ngModel"
+                    #reasonControl4="ngModel"></ion-input>
+                  </ion-item>
+              </ion-row>
+              <span class="help-block" *ngIf="reasonControl4.invalid" style="font-size:12px;">
+                Reason is required
+              </span>
+            </div>
+          </div>
+          <div *ngIf="isFifthChild">
+            <div class="form-group" [class.has-error]="fullNameControl5.invalid && fullNameControl5.touched" style="margin-top:10px">
+              <ion-row>
+                  Student's Full Name
+              </ion-row>
+              <ion-row style="border: 1px solid #dedede;max-width:300px">
+                <ion-item class="customInput">
+                  <ion-input required type="text" placeholder="First Name" [(ngModel)]="absenceDetails.FullName5" name="FullName5" #fullNameControl5="ngModel"></ion-input>
+                </ion-item>
+              </ion-row>
+              <span class="help-block" *ngIf="fullNameControl5.invalid" style="font-size:12px">
+                Full Name is required
+              </span>
+            </div>
+            <div class="form-group" [class.has-error]="classControl5.invalid && classControl5.touched" style="margin-top:10px">
+              <ion-row>
+                Class
+              </ion-row>
+              <ion-row style="border: 1px solid #dedede;max-width:300px">
+                <ion-item class="customInput">
+                  <ion-input required type="text" placeholder="Class" [(ngModel)]="absenceDetails.Class5" name="Class5" #classControl="ngModel"
+                    #classControl5="ngModel"></ion-input>
+                </ion-item>
+              </ion-row>
+              <span class="help-block" *ngIf="classControl5.invalid" style="font-size:12px">
+                Class is required
+              </span>
+            </div>
+            <div class="form-group" [class.has-error]="reasonControl5.invalid && reasonControl5.touched" style="margin-top:10px">
+              <ion-row>
+                Reason
+              </ion-row>
+              <ion-row style="border: 1px solid #dedede;max-width:300px">
+                <ion-item class="customInput">
+                  <ion-input required type="text" placeholder="Reason" [(ngModel)]="absenceDetails.Reason5" name="Reason5" #reasonControl5="ngModel"
+                    #reasonControl5="ngModel"></ion-input>
+                  </ion-item>
+              </ion-row>
+              <span class="help-block" *ngIf="reasonControl5.invalid" style="font-size:12px">
+                Reason is required
+              </span>
+            </div>
+          </div>
+          <ion-row>
+            <ion-button type="button" class="customButton" (click)="addMoreChildrens()">Add</ion-button>
+            <ion-button type="button" class="customButton" (click)="removeChildrens()">Remove</ion-button>
+          </ion-row>
+          <!-- <ion-list>
+            <ion-radio-group  [(ngModel)]="absenceDetails.AbsendOrLate" name="absenceOrLate" #absenceOrLateControl required>
+              <ion-item>
+                <ion-label>Absent</ion-label>
+                <ion-radio value="Absent"></ion-radio>
+              </ion-item>
+              <ion-item>
+                <ion-label>Late</ion-label>
+                <ion-radio value="Late"></ion-radio>
+              </ion-item>
+            </ion-radio-group>
+          </ion-list> -->
+          <ion-item style="margin-top: 10px;max-width:300px;border: #dedede 1px solid;border-bottom: white 1px solid;">
+            <ion-label>Away For Full Day</ion-label>
+            <ion-select placeholder="Yes/No" [(ngModel)]="absenceDetails.YesOrNo"  name="yesOrNo" #yesOrNoControl required>
+              <ion-select-option value="yes">Yes</ion-select-option>
+              <ion-select-option value="no">No</ion-select-option>
+            </ion-select>
+          </ion-item>
+          <div class="form-group" [class.has-error]="parentsfullNameControl.invalid && parentsfullNameControl.touched" style="margin-top: 10px;">
+            <ion-row>
+              Parent's Full Name
+            </ion-row>
+            <ion-row style="border: 1px solid #dedede;max-width:300px">
+              <ion-item class="customInput">
+                <ion-input #parentsfullNameControl required type="text" placeholder="Parents Full Name" [(ngModel)]="absenceDetails.ParentsFullName" name="ParentsFullName1"
+                  #parentsfullNameControl="ngModel"></ion-input>
+              </ion-item>
+            </ion-row>
+            <span class="help-block" *ngIf="parentsfullNameControl.invalid" style="font-size:12px">
+              Parent's Full Name is required
+            </span>
+          </div>
+          <div class="form-group" [class.has-error]="absenceFromDateControl.invalid && absenceFromDateControl.touched" style="margin-top:10px">
+            <ion-row>
+              From Date
+            </ion-row>
+            <ion-row >
+              <div class="datestyle"><!-- style="width:210px;border-bottom:1px solid #dedede !important;-->
+              <ion-datetime required display-format="DD/MM/YYYY" [(ngModel)]="absenceDetails.absenceFromDate" name="absenceFromDate" #absenceFrom="ngModel"
+                #absenceFromDateControl="ngModel"></ion-datetime>
+              </div>
+            </ion-row>
+            <span class="help-block" *ngIf="absenceFromDateControl.invalid" style="font-size:12px">
+              Absence From Date is required
+            </span>
+          </div>
+          <div class="form-group" [class.has-error]="absenceToDateControl.invalid && absenceToDateControl.touched" style="margin-top:10px">
+              <ion-row>
+                To Date
+              </ion-row>
+              <ion-row >
+                  <div class="datestyle" style="width:210px;border-bottom:1px solid #dedede !important;">
+                <ion-datetime required display-format="DD/MM/YYYY" [(ngModel)]="absenceDetails.absenceToDate" name="absenceToDate" #absenceTo="ngModel"
+                  #absenceToDateControl="ngModel"></ion-datetime>
+                  </div>
+              </ion-row>
+              <span class="help-block" *ngIf="absenceToDateControl.invalid" style="font-size:12px">
+                Absence To Date is required
+              </span>
+            </div>
+          <ion-row>
+            <app-signaturepad></app-signaturepad>
+          </ion-row>
+          <ion-row style="margin-top:10px">
+            <ion-button type="button" class="customButton"  (click)="saveAbsenceDetails()" [disabled]="reEnrolmentForm.invalid">Save</ion-button>
+            <ion-button type="button" class="customButton" (click)="exitAbsenceForm()">Exit</ion-button>
+            <ion-button type="button" class="customButton" (click)="clearSignature()">Clear Sign</ion-button>
+          </ion-row>
+  
+        </div>
+      <!-- </div> -->
+    </form>
+  </ion-content>

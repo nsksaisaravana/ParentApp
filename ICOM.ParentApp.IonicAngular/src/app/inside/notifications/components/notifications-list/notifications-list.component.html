@@ -1,0 +1,59 @@
+<!-- <div *ngIf="notificationItems.length >0">
+  <ion-list *ngFor="let notification of notificationItems" >
+    <ion-item (click)="notificationItemClick(notification)">
+      <ion-card>
+        <img  [src]="newsletter.FileDirRef"/>
+        <ion-card-header>
+          <ion-card-title>{{notification.Title}}</ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+            <p>{{notification.ShortDesc}}</p>
+        </ion-card-content>
+      </ion-card>
+    </ion-item>
+  </ion-list>
+  </div> -->
+
+  <!--<table mat-table [dataSource]="pushNotificationDetails" class="mat-elevation-z8">
+    <ng-container matColumnDef="Title">
+      <th mat-header-cell *matHeaderCellDef>Notification</th>
+      <td mat-cell *matCellDef="let element" (click)="pushNotificationClickEvent(element)" > {{element.Title}} </td>
+    </ng-container>-->
+    
+    <!-- Weight Column -->
+   <!-- <ng-container matColumnDef="SendDate">
+      <th mat-header-cell *matHeaderCellDef> Start/Send </th>
+      <td mat-cell *matCellDef="let element"> {{element.SendDate | date}} </td>
+    </ng-container>
+  
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>-->
+
+  <table mat-table [dataSource]="pushNotificationDetails" class="mat-elevation-z8">
+      
+      <!-- <ng-container matColumnDef="Checkbox"> -->
+          <!--  <th mat-header-cell *matHeaderCellDef>Notification</th>-->
+          <!-- <td mat-cell *matCellDef="let element"  style="width:10%;">  <input type="checkbox" style="width:15px;height:15px;"> </td> -->
+          <!-- <td mat-cell *matCellDef="let element"  style="width:10%;"></td> -->
+          <!-- </ng-container>   -->
+    <ng-container matColumnDef="Title">
+    <!--  <th mat-header-cell *matHeaderCellDef>Notification</th>-->
+      <td  style="width:65%;padding-left:10px;" mat-cell *matCellDef="let element" (click)="pushNotificationClickEvent(element)" >
+        <div class="notificationTitle"> {{element.Title}} </div>
+            <div class="notificationDetails">{{element.Desc}}</div>
+        </td>
+
+      
+    </ng-container>
+
+    <ng-container matColumnDef="SendDate">
+   <!--   <th mat-header-cell *matHeaderCellDef> Start/Send </th>-->
+      <td mat-cell *matCellDef="let element" class="notificationDate"> {{element.SendDate | date:'d MMM yyyy'}} </td>
+    </ng-container>
+    
+  
+   <!-- <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>-->
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;" style="width:100%;"></tr>
+  </table>
+  

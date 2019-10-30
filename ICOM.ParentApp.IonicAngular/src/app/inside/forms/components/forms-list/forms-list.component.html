@@ -1,0 +1,23 @@
+
+<!--<ion-list *ngFor="let form of forms">
+    <ion-item (click)="formClick(form)">
+      <ion-label style="color:red">
+        {{form.title}}
+      </ion-label>
+    </ion-item>
+</ion-list>-->
+
+<!-- <app-enrolment-form></app-enrolment-form> -->
+
+<!-- <div class="login__overlay" style="background-image: url(/assets/images/menuBackground.png);"> -->
+  <div *ngFor="let form of forms" class="divContainer">
+      <ion-item (click)="downloadAndShowNewsLetterPdf(form.Id)">
+          <ion-icon name="list-box" style="color:#1e73be"></ion-icon>
+        <ion-label style="margin-left:15px">
+          {{form.Title}}
+        </ion-label>
+        <div #viewer class="viewer"></div>
+      </ion-item>
+      
+  </div>
+  <!-- </div> -->

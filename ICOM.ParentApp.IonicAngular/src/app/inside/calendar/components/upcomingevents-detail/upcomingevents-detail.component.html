@@ -1,0 +1,36 @@
+<!-- <p>
+    {{upcomingEventDetails.Title}}
+</p>
+<div
+    innerHTML={{upcomingEventDetails.EventDesc}} >
+</div> -->
+<ion-item >
+    <ion-card style="width:400px;" style="background-image: url(/assets/images/menuBackground.png);background-size: auto 100%;">
+        <ion-card-header style="background-color: rgba(255, 255, 255, 0.7);">
+            <ion-row justify-content-between>
+              <ion-col col-auto class="imageContainer">
+                <!-- <ion-icon ios="ios-calendar" md="md-calendar"></ion-icon> -->
+                <img src="/assets/images/calendar.png" style="width:75%;margin-left:12px;" item-left/>
+                <span class="calendarDate">{{upcomingEventDetails.EventDate | date:'dd MMM'}}</span>
+              </ion-col>
+              <ion-col>
+                <ion-row text-wrap>
+                  <span><ion-icon style="position:relative;font-size:25px;color:#1E73BE;" name="pin"></ion-icon></span>
+                  <h5 style="margin-top:0;font-weight:400;">{{upcomingEventDetails.EventAddress}}</h5>
+                </ion-row>
+                <ion-row text-wrap>
+                  <span><ion-icon style="position:relative;font-size:25px;color:#1E73BE;" name="time"></ion-icon></span>
+                  <p style="margin-top:0;">{{upcomingEventDetails.EventStartTime | date:'shortTime'}} - {{upcomingEventDetails.EventEndTime | date:'shortTime'}}</p>
+                </ion-row>
+                <ion-row>
+                  <p style="font-size:20px;margin-top:0px;padding-left:5px;margin-bottom:5px;">{{upcomingEventDetails.Title}}</p>
+                </ion-row>
+              </ion-col>
+              <ion-row text-wrap text-wrap style="padding:10px">
+                <!-- <p style="margin-top:0px;padding-left:5px;font-size:16px">{{upcomingEventDetails.EventDesc}}</p> -->
+                <div class="newsContent" innerHTML={{upcomingEventDetails.EventDesc}}></div>
+              </ion-row>
+            </ion-row>
+        </ion-card-header>
+    </ion-card>
+    </ion-item>

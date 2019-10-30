@@ -1,0 +1,186 @@
+.newstitle      {width:70%;float:left;padding-right: 10px;}
+.newsdate       {width:30%;float:right;font-weight: lighter;font-size:13px;text-align: center;}
+.newsDetails    {width:65%;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;margin-left: 2%;font-weight: lighter;font-size:13px;}
+.mat-expansion-panel-header {font-size:16px !important}
+
+@media (max-width: 767px) {
+.newstitle      {width:60%;float:left;font-size:14px;}
+.newsdate       {width:40%;float:right;font-size:10px;margin-top: 8px;}
+.newsDetails    {width:95%;font-size:12px;}
+ion-item        {height:65px}
+ }
+
+
+ion-list ion-item           {--inner-padding-end: 0px !important;}
+ion-card                    {box-shadow: none !important;margin: 0 !important;}
+ion-card-header             {padding: 0px 0px 0px 0px !important;}
+    :root                       {--ion-background-color:red}
+    .item-native                {background-color:var(--ion-background-color)}
+  //.login__overlay             {position: absolute;top: 0;left: 0;width: 100%;height: 100%;background-size: 100% 100%;background-position: center center;}
+    .list-ios                   {margin-bottom: 5px !important;}
+    .ion-row                    {height:120px;}
+    .list-md                    {background:transparent;margin: 0px 0px;padding-bottom: 0px !important;padding-top: 3px !important;}
+    .mainContainer              {background: rgba(254, 255, 254, 0.2);width:1100px;height:120px;}
+    .rowImage                   {height:122px;}
+    .colImage                   {width:100px;max-height: 122px;}
+    .image                      {width:90%;height:100%;margin:auto;  object-fit:cover;}
+    .colContent                 {width:600px;max-height: 100px;}
+    .rowTitleNews               {width:490px;}
+    .titleContent               {font-size:20px;margin-top:0px;padding-left:0px;margin-bottom:5px;text-transform: uppercase;font-weight:500}
+    .rowNewsContent             {width:490px;}
+    .newsContent                {font-size: 12px;height: 58px;display: block;display: -webkit-box;max-width: 100%;margin: 0 auto;line-height: 1.3;-webkit-line-clamp: 4;-webkit-box-orient: vertical;overflow: hidden;text-overflow: ellipsis;margin-bottom:5px;}
+    .readMore                   {width:490px;text-align:right;}
+
+
+ 
+
+ /*IPhone X landscape */
+ @media only screen 
+ and (min-device-width: 375px) 
+ and (max-device-width: 812px) 
+ and (-webkit-min-device-pixel-ratio: 3)
+ and (orientation: landscape) { 
+   .rowNewsContent,				{width: 465px;}
+}
+
+
+@media only screen and (max-width: 768px)and (orientation: portrait)  {
+    
+    .mainContainer					{width: 350px;height: 100px;}
+    .rowImage, .colImage         	{height: 80px}
+    .colContent 					{width: 100px;margin-right:5px}
+    .rowTitleNews					{width: 200px;}
+    .titleContent					{font-size: 12px;margin-top: 0px;padding-left: 0px;margin-bottom: 5px;text-transform: uppercase;font-weight: 500;}
+    .rowNewsContent					{width: 140px;}
+    .newsContent					{font-size: 8px;height: 40px;overflow: hidden;}
+    .readMore						{font-size:8px;font-weight: bold;}
+ }
+
+ @media only screen and (max-width: 768px)and (orientation: landscape)  {
+    .image							{width:100% !important}
+	.colContent 					{width: 400px !important;}
+	.rowNewsContent					{width: 370px;}
+	.readMore						{margin-top: 5px;}
+ }
+ 
+ /* IPad portrait */
+ @media only screen 
+   and (min-device-width: 768px) 
+   and (max-device-width: 1024px) 
+   and (orientation: portrait) 
+   and (-webkit-min-device-pixel-ratio: 1) {
+    .mainContainer					{width: 700px !important;}
+    .colContent, .rowTitleNews, .rowNewsContent				{width: 350px;}
+    
+ }
+ 
+ /* IPad landscape */
+ @media only screen 
+   and (min-device-width: 768px) 
+   and (max-device-width: 1024px) 
+   and (orientation: landscape) 
+   and (-webkit-min-device-pixel-ratio: 1) {
+    .colContent, .rowTitleNews, .rowNewsContent				{width: 330px;}
+ }
+ 
+ /*Ipad PRO - Potrait*/
+ @media only screen 
+   and (min-device-width: 1024px) 
+   and (max-device-width: 1024px) 
+   and (orientation: portrait) 
+   and (-webkit-min-device-pixel-ratio: 2) {
+
+    .mainContainer					{width: 7000px !important;}
+    .colContent, .rowTitleNews, .rowNewsContent				{width: 300px;}
+ }
+ /*Ipad PRO - Lndscape*/
+ @media only screen 
+   and (min-device-width: 1366px) 
+   and (max-device-width: 1366px) 
+   and (orientation: landscape) 
+   and (-webkit-min-device-pixel-ratio: 2) {
+    .colContent 					{margin-right:20px}
+ }
+ 
+ /* ----------- Galaxy S4, S5 and Note 3 ----------- */
+ 
+ /* Portrait and Landscape*/ 
+ @media screen 
+   and (device-width: 320px) 
+   and (device-height: 640px) 
+   and (-webkit-device-pixel-ratio: 2) 
+   and (orientation: portrait) {
+   
+ }
+ 
+ /*Pixel 2 Potrait*/
+ @media only screen 
+ and (min-width: 411px)
+ and (max-width: 767px)
+ and (orientation: portrait) {
+
+    .rowNewsContent, .colContent					{width: 160px;}
+ }
+ 
+ /*Iphone 5/SE portrait*/
+ @media only screen 
+   and (min-device-width: 320px) 
+   and (max-device-width: 568px)
+   and (-webkit-min-device-pixel-ratio: 2)
+   and (orientation: portrait) {
+
+ }
+ 
+ /*IPhone X Portrait */
+ @media only screen 
+   and (min-device-width: 375px) 
+   and (max-device-width: 812px) 
+   and (-webkit-min-device-pixel-ratio: 3)
+   and (orientation: portrait) {
+    .colContent 				        {width: 180px;margin-right:20px !important;} 
+    .rowNewsContent, .readMore			{width: 180px;}
+ }
+ /*iPhone 6, 7, & 8 in portrait*/
+ @media only screen 
+ and (min-device-width : 375px) 
+ and (max-device-width : 667px) 
+ and (orientation : portrait) { 
+  .mainContainer					{width: 4000px !important;}
+  }
+ 
+
+  .eventNo {
+   position: absolute;
+   right: 50px;
+   background: #96000C;
+   padding: 4px 8px 4px 8px;
+   border-radius: 16px;
+   color: white;
+}
+
+
+.page {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+}
+
+.header {
+  height: 60px;
+  padding: 8px 8px 8px 16px;
+  background: #00a5e4;
+  box-sizing: border-box;
+  font-size: 1.2em;
+  line-height: 44px;
+  color: white;
+}
+
+app-webviewer {
+  flex: 1;
+  margin: 8px;
+  -webkit-box-shadow: 1px 1px 10px #999;
+          box-shadow: 1px 1px 10px #999;
+}
+
+.viewer { width: 100%; height: 100%; }

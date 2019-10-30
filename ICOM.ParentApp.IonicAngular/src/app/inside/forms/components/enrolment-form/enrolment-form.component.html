@@ -1,0 +1,33 @@
+<div>
+  <ion-row>
+    Full Name
+  </ion-row>
+  <ion-row>
+    <ion-item>
+      <ion-input required type="text" placeholder="First Name"></ion-input>
+    </ion-item>
+  </ion-row>
+  <ion-row>
+    Class
+  </ion-row>
+  <ion-row>
+    <ion-item>
+      <ion-input required type="text" placeholder="Class"></ion-input>
+    </ion-item>
+  </ion-row>
+  <ion-row>
+    Add
+  </ion-row>
+  <ion-row>
+    <div id="signature-pad" class="m-signature-pad">
+      <div class="m-signature-pad-body">
+        <signature-pad [options]="signaturePadOptions"></signature-pad>
+      </div>
+    </div>
+  </ion-row>
+  <ion-row>
+    <ion-button expand="full" type="button" (click)="saveSignature()">Save</ion-button>
+    <ion-button expand="full" type="button" (click)="clearSignature()">Clear</ion-button>
+  </ion-row>
+
+</div>

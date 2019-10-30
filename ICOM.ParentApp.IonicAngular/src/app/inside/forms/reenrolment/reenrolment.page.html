@@ -1,0 +1,198 @@
+<ion-header>
+  <ion-toolbar color="tertiary">
+      <ion-buttons slot="start">
+        <ion-menu-button ></ion-menu-button>
+      </ion-buttons>
+    <ion-title>Re-Enrolment</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <form #reEnrolmentForm="ngForm">
+    <!-- <div class="login__overlay" style="background-image: url(/assets/images/menuBackground.png);"> -->
+      <div class="divContainer">
+        <div class="form-group" [class.has-error]="fullNameControl.invalid && fullNameControl.touched">
+          <ion-row>
+            Full Name
+          </ion-row>
+          <ion-row style="border: 1px solid #dedede;max-width:300px">
+            <ion-item class="customInput">
+              <ion-input #fullNameControl required type="text" placeholder="First Name" [(ngModel)]="reenrolmentDetails.FullName1" name="FullName1"
+                #fullNameControl="ngModel"></ion-input>
+            </ion-item>
+          </ion-row>
+          <span class="help-block" *ngIf="fullNameControl.invalid" style="font-size:12px">
+              Full Name is required
+            </span>
+        </div>
+        <div class="form-group" [class.has-error]="classControl.invalid && classControl.touched" style="margin-top:10px">
+          <ion-row>
+            Class
+          </ion-row>
+          <ion-row style="border: 1px solid #dedede;max-width:300px">
+              <ion-item class="customInput">
+              <ion-input required type="text" placeholder="Class" [(ngModel)]="reenrolmentDetails.Class1" name="Class1" #classControl="ngModel"
+                #classControl="ngModel"></ion-input>
+            </ion-item>
+           <!-- <div class="help-block" *ngIf="classControl.invalid" style="font-size:12px;margin:3px;color:gray">
+              Class is required
+            </div>-->
+          </ion-row>
+          <span class="help-block" *ngIf="classControl.invalid" style="font-size:12px">
+              Class is required
+            </span>
+        </div>
+        <div *ngIf="isSecondChild">
+          <div class="form-group" [class.has-error]="fullNameControl2.invalid && fullNameControl2.touched" style="margin-top:10px">
+            <ion-row>
+              Full Name
+            </ion-row>
+            <ion-row style="border: 1px solid #dedede;max-width:300px">
+                <ion-item class="customInput">
+                <ion-input required type="text" placeholder="First Name" [(ngModel)]="reenrolmentDetails.FullName2" name="FullName2" #fullNameControl2="ngModel"></ion-input>
+              </ion-item>
+            </ion-row>
+            <span class="help-block" *ngIf="fullNameControl2.invalid" style="font-size:12px">
+                Full Name is required
+              </span>
+          </div>
+          <div class="form-group" [class.has-error]="classControl2.invalid && classControl2.touched" style="margin-top:10px">
+            <ion-row>
+              Class
+            </ion-row>
+            <ion-row style="border: 1px solid #dedede;max-width:300px">
+                <ion-item class="customInput">
+                <ion-input required type="text" placeholder="Class" [(ngModel)]="reenrolmentDetails.Class2" name="Class2" #classControl="ngModel"
+                  #classControl2="ngModel"></ion-input>
+              </ion-item>
+            </ion-row>
+            <span class="help-block" *ngIf="classControl2.invalid" style="font-size:12px">
+                Class is required
+              </span>
+          </div>
+        </div>
+        <div *ngIf="isThirdChild">
+          <div class="form-group" [class.has-error]="fullNameControl3.invalid && fullNameControl3.touched" style="margin-top:10px">
+            <ion-row>
+              Full Name
+            </ion-row>
+            <ion-row style="border: 1px solid #dedede;max-width:300px">
+                <ion-item class="customInput">
+                <ion-input required type="text" placeholder="First Name" [(ngModel)]="reenrolmentDetails.FullName3" name="FullName3" #fullNameControl3="ngModel"></ion-input>
+              </ion-item>
+            </ion-row>
+            <span class="help-block" *ngIf="fullNameControl3.invalid" style="font-size:12px">
+                Full Name is required
+              </span>
+          </div>
+          <div class="form-group" [class.has-error]="classControl3.invalid && classControl3.touched" style="margin-top:10px">
+            <ion-row>
+              Class
+            </ion-row>
+            <ion-row style="border: 1px solid #dedede;max-width:300px">
+                <ion-item class="customInput">
+                <ion-input required type="text" placeholder="Class" [(ngModel)]="reenrolmentDetails.Class3" name="Class3" #classControl="ngModel"
+                  #classControl3="ngModel"></ion-input>
+              </ion-item>
+            </ion-row>
+            <span class="help-block" *ngIf="classControl3.invalid" style="font-size:12px">
+                Class is required
+              </span>
+          </div>
+        </div>
+        <div *ngIf="isFourthChild">
+          <div class="form-group" [class.has-error]="fullNameControl4.invalid && fullNameControl4.touched" style="margin-top:10px">
+            <ion-row>
+              Full Name
+            </ion-row>
+            <ion-row style="border: 1px solid #dedede;max-width:300px">
+                <ion-item class="customInput">
+                <ion-input required type="text" placeholder="First Name" [(ngModel)]="reenrolmentDetails.FullName4" name="FullName4" #fullNameControl4="ngModel"></ion-input>
+              </ion-item>
+            </ion-row>
+            <span class="help-block" *ngIf="fullNameControl4.invalid" style="font-size:12px;">
+                Full Name is required
+              </span>
+          </div>
+          <div class="form-group" [class.has-error]="classControl4.invalid && classControl4.touched" style="margin-top:10px">
+            <ion-row>
+              Class
+            </ion-row>
+            <ion-row style="border: 1px solid #dedede;max-width:300px">
+                <ion-item class="customInput">
+                <ion-input required type="text" placeholder="Class" [(ngModel)]="reenrolmentDetails.Class4" name="Class4" #classControl="ngModel"
+                  #classControl4="ngModel"></ion-input>
+              </ion-item>
+            </ion-row>
+            <span class="help-block" *ngIf="classControl4.invalid"  style="font-size:12px;">
+                Class is required
+              </span>
+          </div>
+        </div>
+        <div *ngIf="isFifthChild">
+          <div class="form-group" [class.has-error]="fullNameControl5.invalid && fullNameControl5.touched" style="margin-top:10px">
+            <ion-row>
+              Full Name
+            </ion-row>
+            <ion-row style="border: 1px solid #dedede;max-width:300px">
+                <ion-item class="customInput">
+                <ion-input class="classinput" required type="text" placeholder="First Name" [(ngModel)]="reenrolmentDetails.FullName5" name="FullName5" #fullNameControl5="ngModel"></ion-input>
+              </ion-item>
+            </ion-row>
+            <span class="help-block" *ngIf="fullNameControl5.invalid"  style="font-size:12px;">
+                Full Name is required
+              </span>
+          </div>
+          <div class="form-group" [class.has-error]="classControl5.invalid && classControl5.touched" style="margin-top:10px">
+            <ion-row>
+              Class
+            </ion-row>
+            <ion-row  style="border: 1px solid #dedede;max-width:300px">
+                <ion-item class="customInput">
+                <ion-input required type="text" placeholder="Class" [(ngModel)]="reenrolmentDetails.Class5" name="Class5" #classControl="ngModel"
+                  #classControl5="ngModel"></ion-input>
+              </ion-item>
+            </ion-row>
+            <span class="help-block" *ngIf="classControl5.invalid"  style="font-size:12px;">
+                Class is required
+              </span>
+          </div>
+        </div>
+        <ion-row>
+          <ion-button type="button" class="customButton" (click)="addMoreChildrens()">Add</ion-button>
+          <ion-button type="button" class="customButton" (click)="removeChildrens()">Remove</ion-button>
+        </ion-row>
+        <div class="form-group" [class.has-error]="enrolmentDateControl.invalid && enrolmentDateControl.touched" style="margin-top:20px;">
+          <ion-row>
+            Date
+          </ion-row>
+          <ion-row>
+           <div class="datestyle"><!-- style="width:210px;border-bottom:1px solid #dedede !important;"-->
+            <ion-datetime required display-format="DD/MM/YYYY" [(ngModel)]="reenrolmentDetails.EnrolmentDate" name="enrolmentDate" #enrolment="ngModel"
+              #enrolmentDateControl="ngModel"></ion-datetime>
+            </div>
+          </ion-row>
+          <span class="help-block" *ngIf="enrolmentDateControl.invalid">
+            Enrolment Date is required
+          </span>
+        </div>
+        <ion-row style="max-width:300px">
+          <div id="signature-pad" class="m-signature-pad form-group" >
+            <div class="m-signature-pad-body">
+              <signature-pad [options]="signaturePadOptions" style="max-width:300px"></signature-pad>
+            </div>
+            <span class="help-block" *ngIf="isSignaturePadNotSigned">
+              Signature is required
+            </span>
+          </div>
+        </ion-row>
+        <ion-row style="margin-top:10px">
+          <ion-button type="button" class="customButton" (click)="saveSignature()" [disabled]="reEnrolmentForm.invalid">Save</ion-button>
+          <ion-button type="button" class="customButton" (click)="clearSignature()">Clear</ion-button>
+          <ion-button type="button" class="customButton" (click)="exitEnrolmentForm()">Back</ion-button>
+        </ion-row>
+
+      </div>
+    <!-- </div> -->
+  </form>
+</ion-content>
